@@ -1,0 +1,511 @@
+#include"ListLinked.h"
+
+/*
+ListNode Constructor
+Requirements: none
+Results: Creates an initialized listnode by setting the listnode's data item to the value
+         nodeData and the ListNode's next pointer to the value of nextPtr 
+*/
+template<typename DataType>
+List<DataType>::ListNode::ListNode(const DataType& nodeData, ListNode* nextPtr)
+  {
+    //set data
+    dataItem = nodeData;
+    //set pointer
+    next = nextPtr; 
+  }
+
+/*
+Default List Constructor
+Requirements:none
+Results: Creates an empty list
+*/  
+template<typename DataType>
+List<DataType>::List(int ignored)
+  {
+    //set node pointers to null
+    head = cursor = NULL; 
+  }
+  
+/*
+Copy Constructor
+Requiremnts:none
+Results: initializes the list to be equivalent to the other list
+*/
+template<typename DataType>
+List<DataType>::List(const List& other)
+  {
+    //initialization
+    ListNode* temp;
+    head = cursor = NULL;         
+    //check to see if other list is empty
+    if(!other.isEmpty())
+      {
+        //set temp to other list
+        temp = other.head;
+        //copy first node
+        head = cursor = new ListNode(other.head->dataItem,NULL);
+        //copy remaining nodes
+        while(temp->next != NULL)
+          {
+            temp = temp->next; 
+            
+            cursor->next = new ListNode(temp->dataItem, NULL);
+            
+            cursor= cursor->next; 
+          }
+         
+      }
+   temp= NULL; 
+  }
+  
+/*
+Overloaded Assignment Operator
+Requirements: none
+Results: sets the list to be equivalent to the other list and returns
+         a reference to this object
+*/  
+template<typename DataType>
+List<DataType>& List<DataType>::operator=(const List& other)
+  {
+    //initialization
+    ListNode* temp;
+    //check for assignment error
+    if(this != &other)
+      {
+        //initialize head and cursor
+        head = cursor = NULL; 
+        //check to see if other list is empty
+        if(!other.isEmpty())
+          {
+            //set temp to other list
+            temp = other.head; 
+            //set head and cursor
+            head = cursor = new ListNode(other.head->dataItem,NULL);
+            //copy remainder of list
+            while(temp->next != NULL)
+              {
+                temp= temp->next;
+                
+                cursor->next = new ListNode(temp->dataItem,NULL);
+                
+                cursor=cursor->next; 
+              }
+          }
+      }
+    temp= NULL; 
+    //return current list 
+    return(*this); 
+  } 
+  
+/*
+List Destructor
+Requirements: none
+Results: deallocates the memory used to store the nodes in the list
+*/
+template<typename DataType>
+List<DataType>::~List()
+  {
+   //check to see if list is empty
+   if(!isEmpty())
+     {
+       //go through list and deallocate nodes
+       cursor = head; 
+       while(cursor->next != NULL)
+         {
+           cursor = cursor->next; 
+           delete head; 
+           head = cursor; 
+         }
+      //delete last node
+      delete cursor;
+      //set pointers to null
+      head = cursor = NULL;     
+     } 
+  }
+  
+/*
+Insert function
+Requirements: list is not full
+Results: inserts newDataItem into the list. If the list is not empty, then 
+         inserts newDataItem after the cursor. Otherwise, inserts newDataItem as the first
+         and only data item in the list. Always moves cursor to newDataItem
+*/
+template<typename DataType>
+bool List<DataType>::insert(const DataType& newDataItem)
+  {
+    //initialization
+    ListNode* temp; 
+    //check to see if full
+    if(!isFull())
+      {
+       //check to see if empty
+       if(isEmpty())
+         {
+           head = cursor = new ListNode(newDataItem, NULL);          
+         }
+         
+      //if not first item
+      else
+        {
+          temp= new ListNode(newDataItem,cursor->next);
+          cursor->next = temp; 
+          cursor=cursor->next;  
+        }
+      temp = NULL; 
+       return true; 
+      }
+    return false; 
+  }
+  
+/*
+Remove function
+Requirements: List is not empty
+Results: removes the data item marked byu the cursor from the list. 
+         If list is not empty, cursor moves to item following removed node.
+         If deleted item is at the end of the list, moves the cursor to the beginning of the list
+*/ 
+template<typename DataType>
+bool List<DataType>::remove()
+  {
+    //initialization 
+    ListNode* temp;
+    if(!isEmpty())
+      {
+       if(head == cursor)
+         {
+           cursor= cursor->next;
+           delete head;
+           head = cursor;
+           return true;  
+         }
+       else if(temp->next == NULL)
+           {   
+             //set temp to cursor
+             temp = cursor;
+             //move cursor to previous node
+             gotoPrior(); 
+             //link cursor
+             cursor->next = temp->next; 
+             //move to next node
+             cursor = cursor->next; 
+             //move cursor to beginning
+             gotoBeginning(); 
+           }
+        else
+          {
+            //set temp to cursor
+             temp = cursor;
+             //move cursor to previous node
+             gotoPrior(); 
+             //link cursor
+             cursor->next = temp->next; 
+             //move to next node
+             cursor = cursor->next; 
+          }
+        }
+         
+       
+       //deallocate node
+       delete temp; 
+       temp = NULL; 
+       return true; 
+      }
+    
+    temp = NULL;
+    return false; 
+  }
+  
+/*
+Replace Function
+Requirements: List is not empty
+Results: replaces the data item marked by the cursor with newDataItem. 
+         Cursor remains at the newDataItem
+*/
+
+template<typename DataType>
+bool List<DataType>::replace(const DataType& newDataItem)
+  {
+    //check to see if empty
+    if(!isEmpty())
+      {
+        cursor->dataItem = newDataItem; 
+        return true; 
+      }
+    return false; 
+  }
+  
+/*
+Clear Function
+Requirements: none
+Results: removes all the data items in the list
+*/
+template<typename DataType>
+void List<DataType>::clear()
+  {
+    //check to see if empty
+    if(!isEmpty())
+      {
+        //remove remaing data
+        cursor = head; 
+        
+        while(cursor->next != NULL)
+          {
+            cursor=cursor->next;
+            delete head;
+            head = cursor; 
+          }
+        //delete last node
+        delete cursor;
+        cursor = head = NULL; 
+      }
+  }
+  
+/*
+isEmpty Function
+Requirements: none
+Results: returns true irf list is empty, false otherwise
+*/
+template<typename DataType>
+bool List<DataType>::isEmpty()const
+  {
+    if(head==NULL && cursor==NULL)
+      {
+        return true; 
+      }
+    return false; 
+  }
+  
+/*
+isFull function
+requirements: none
+results: results true if list is full (always false for this project)
+*/
+template<typename DataType>
+bool List<DataType>::isFull()const
+  {
+    return false; 
+  }
+  
+/*
+gotoBeginning function
+requirements: list is not empty
+results: moves cursor to the beginning of the list
+*/
+template<typename DataType>
+bool List<DataType>::gotoBeginning()
+  {
+    //check to see if list is empty
+    if(!isEmpty())
+      {
+        cursor = head; 
+        return true; 
+      }
+    return false; 
+  }
+  
+/*
+gotoEnd function
+Requirements: list is not empty
+Results: moves the cursor to the end of the list
+*/
+template<typename DataType>
+bool List<DataType>::gotoEnd()
+  {
+    //check to see if list is empty
+    if(!isEmpty())
+      {
+        while(cursor->next != NULL)
+          {
+            cursor= cursor->next; 
+          }
+          
+        return true; 
+      }
+   return false; 
+  }
+  
+/*
+gotoNext
+Requirements: list is not empty
+Results: If the Cursor is not at the end of the list, then moves the cursor 
+         to mark the next data item in the list and return true. Otherwise,
+         returns false
+*/
+template<typename DataType>
+bool List<DataType>::gotoNext()
+  {
+    //check to see if list is empty
+    //check to see if cursor is at the end
+    if(!isEmpty() && cursor->next != NULL)
+      {
+        //move cursor to the next node
+        cursor= cursor->next; 
+        return true;       
+      }
+    return false; 
+  }
+  
+/*
+gotoPrior function
+Requirements: list is not empty
+Results: if the cursor is not a the beginning of the list, then moves the cursor
+         to mark the preceding data item in the list and returns true. Otherwise,
+         returns false
+*/
+template<typename DataType>
+bool List<DataType>::gotoPrior()
+  {
+    //initialization
+    ListNode* temp; 
+    //check to see if empty
+    //check to see if at the beginning
+    if(!isEmpty() && cursor != head)
+      {
+        //use temp to get to previous node
+        temp = head;
+        while(temp->next != cursor)
+          {
+            temp=temp->next;
+          }     
+        cursor = temp; 
+        
+        temp = NULL;
+        return true;  
+      }
+    temp = NULL; 
+    return false; 
+  }
+  
+/*
+getCursor Function
+Requirements:list is not empty
+Results:returns the value of the data item marked by the cursor
+*/
+template<typename DataType>
+DataType List<DataType>::getCursor()const
+  {
+    //check to see if list is empty
+    if(!isEmpty())
+      {
+        return cursor->dataItem; 
+      }
+  }
+
+  
+  
+  
+  
+//--------------------------------------------------------------------
+// show5.cpp: includes implementation of showStructure
+//--------------------------------------------------------------------
+
+template <typename DataType>
+void List<DataType>::showStructure() const
+
+// Outputs the items in a list. If the list is empty, outputs
+// "Empty list". This operation is intended for testing and
+// debugging purposes only.
+
+{
+    if ( isEmpty() )
+    {
+       cout << "Empty list" << endl;
+    } 
+    else
+    {
+	for (ListNode* temp = head; temp != 0; temp = temp->next) {
+	    if (temp == cursor) {
+		cout << "[";
+	    }
+
+	    // Assumes that dataItem can be printed via << because
+	    // is is either primitive or operator<< is overloaded.
+	    cout << temp->dataItem;	
+
+	    if (temp == cursor) {
+		cout << "]";
+	    }
+	    cout << " ";
+	}
+	cout << endl;
+    }
+}
+
+  
+/*
+Exercise 2
+moveToBeginning function
+Requirements: List is not empty
+Results: Removes the Data item marked by the cursor from the list and
+         reinserts the data item at the beginning of the list.
+         Moves the cursor to the beginning of the list 
+*/
+
+template <typename DataType>
+bool List<DataType>::moveToBeginning()
+  {
+    //initialization
+    ListNode* temp; 
+    //check to see if empty
+    if(!isEmpty())
+      {
+        //check to see if head and cursor are the same
+        if(head != cursor)
+         {
+          //set temp to cursor
+          temp = cursor;
+          //move cursor to previous node
+          gotoPrior();
+          //set cursor's next pointer to node after temp
+          cursor->next = temp->next; 
+          //set temp's next pointer to head
+          temp->next = head;
+          //move head to temp
+          head = temp; 
+          
+          temp = NULL; 
+          return true; 
+         }
+       temp = NULL; 
+       return false; 
+      }
+  }
+
+/*
+Exercise 3
+insertBefore function
+Requirements: list is not full
+Results: Inserts newDataItem into a list. If the list is not empty,
+         then inserts newDataItem immediately before the cursor.
+         Otherwise, inserts newDataItem as the first (and only) data
+         item in the list. In either case, moves the cursor to newDataItem. 
+*/
+template<typename DataType>
+bool List<DataType>::insertBefore(const DataType& newDataItem)
+  {
+    //initialization
+    ListNode* temp;
+    //check to make sure list is not full
+    if(!isFull())
+      {
+        if(isEmpty())
+          {
+            cursor = head = new ListNode(newDataItem,NULL);
+          }
+          
+        else
+          {
+            //set new temp with current cursor's data
+            temp = new ListNode(cursor->dataItem, cursor->next);
+            //change the data in current cursor
+            cursor->dataItem = newDataItem;
+            //link cursor to temp
+            cursor->next = temp; 
+          } 
+         temp = NULL; 
+         return true;
+      }
+    temp = NULL; 
+    return false; 
+  }

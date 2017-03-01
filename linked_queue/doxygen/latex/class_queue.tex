@@ -1,0 +1,127 @@
+\hypertarget{class_queue}{\section{\-Queue$<$ \-Data\-Type $>$ \-Class \-Template \-Reference}
+\label{class_queue}\index{\-Queue$<$ Data\-Type $>$@{\-Queue$<$ Data\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$\-Queue.\-h$>$}
+
+\-Inheritance diagram for \-Queue$<$ \-Data\-Type $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_queue}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_queue_a57485f879466a4af623ee1a61424ad33}{$\sim$\-Queue} ()
+\item 
+virtual void \hyperlink{class_queue_a4e0052bab8c2fb742a16a77d73ec3d5a}{enqueue} (const \-Data\-Type \&new\-Data\-Item)=0  throw (logic\-\_\-error)
+\item 
+virtual \-Data\-Type \hyperlink{class_queue_afde1535196f515caba0aa5cfbe62d329}{dequeue} ()=0  throw (logic\-\_\-error)
+\item 
+virtual void \hyperlink{class_queue_afba4d82c9a20859bb6397bd73c230cdd}{clear} ()=0
+\item 
+virtual bool \hyperlink{class_queue_a1b8e1c0b8bb621de8d4f20c011176bd2}{is\-Empty} () const =0
+\item 
+virtual bool \hyperlink{class_queue_ae64751e270709a705d49e6168e64ade8}{is\-Full} () const =0
+\item 
+virtual void \hyperlink{class_queue_a7db7279a763ca59f7fef354759beab17}{show\-Structure} () const =0
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_queue_aaf3eed0540baaf6609b48910aacc7133}{\-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E} = 8
+\end{DoxyCompactItemize}
+\subsubsection*{template$<$typename Data\-Type$>$ class Queue$<$ Data\-Type $>$}
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_queue_a57485f879466a4af623ee1a61424ad33}{\index{\-Queue@{\-Queue}!$\sim$\-Queue@{$\sim$\-Queue}}
+\index{$\sim$\-Queue@{$\sim$\-Queue}!Queue@{\-Queue}}
+\subsubsection[{$\sim$\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue}$<$ \-Data\-Type $>$\-::$\sim${\bf \-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_a57485f879466a4af623ee1a61424ad33}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_queue_afba4d82c9a20859bb6397bd73c230cdd}{\index{\-Queue@{\-Queue}!clear@{clear}}
+\index{clear@{clear}!Queue@{\-Queue}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ virtual void {\bf \-Queue}$<$ \-Data\-Type $>$\-::{\bf clear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_queue_afba4d82c9a20859bb6397bd73c230cdd}
+
+
+\-Implemented in \hyperlink{class_queue_array_a154afbf4084cb08e3a134f2f6a33df6c}{\-Queue\-Array$<$ Data\-Type $>$}, and \hyperlink{class_queue_linked_a32c66945765e5d42bbb988b1cdf43886}{\-Queue\-Linked$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_afde1535196f515caba0aa5cfbe62d329}{\index{\-Queue@{\-Queue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!Queue@{\-Queue}}
+\subsubsection[{dequeue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ virtual \-Data\-Type {\bf \-Queue}$<$ \-Data\-Type $>$\-::{\bf dequeue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_queue_afde1535196f515caba0aa5cfbe62d329}
+
+
+\-Implemented in \hyperlink{class_queue_array_a34d386d2323aa80b7b441d4436153a89}{\-Queue\-Array$<$ Data\-Type $>$}, and \hyperlink{class_queue_linked_ac0656892f605af3b952c71706d3af55d}{\-Queue\-Linked$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_a4e0052bab8c2fb742a16a77d73ec3d5a}{\index{\-Queue@{\-Queue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Queue@{\-Queue}}
+\subsubsection[{enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ virtual void {\bf \-Queue}$<$ \-Data\-Type $>$\-::{\bf enqueue} (
+\begin{DoxyParamCaption}
+\item[{const \-Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_queue_a4e0052bab8c2fb742a16a77d73ec3d5a}
+
+
+\-Implemented in \hyperlink{class_queue_array_a15e0632c580858c396d3aac1265fecd7}{\-Queue\-Array$<$ Data\-Type $>$}, and \hyperlink{class_queue_linked_a7196448729d053f85f255674c7a57a02}{\-Queue\-Linked$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_a1b8e1c0b8bb621de8d4f20c011176bd2}{\index{\-Queue@{\-Queue}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!Queue@{\-Queue}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ virtual bool {\bf \-Queue}$<$ \-Data\-Type $>$\-::{\bf is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_queue_a1b8e1c0b8bb621de8d4f20c011176bd2}
+
+
+\-Implemented in \hyperlink{class_queue_array_ae1298c7e16e1053b628a019e71db4320}{\-Queue\-Array$<$ Data\-Type $>$}, and \hyperlink{class_queue_linked_a425b83383323217c924a41a0226f7022}{\-Queue\-Linked$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_ae64751e270709a705d49e6168e64ade8}{\index{\-Queue@{\-Queue}!is\-Full@{is\-Full}}
+\index{is\-Full@{is\-Full}!Queue@{\-Queue}}
+\subsubsection[{is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ virtual bool {\bf \-Queue}$<$ \-Data\-Type $>$\-::{\bf is\-Full} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_queue_ae64751e270709a705d49e6168e64ade8}
+
+
+\-Implemented in \hyperlink{class_queue_array_a7233d591dd81e9e3d3f6e4ad5631c81c}{\-Queue\-Array$<$ Data\-Type $>$}, and \hyperlink{class_queue_linked_a3de199675ee629f9d20c48d0e2b65f71}{\-Queue\-Linked$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_a7db7279a763ca59f7fef354759beab17}{\index{\-Queue@{\-Queue}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!Queue@{\-Queue}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ virtual void {\bf \-Queue}$<$ \-Data\-Type $>$\-::{\bf show\-Structure} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_queue_a7db7279a763ca59f7fef354759beab17}
+
+
+\-Implemented in \hyperlink{class_queue_array_adde651b7fd7865dc4f281e21c7f1a6c3}{\-Queue\-Array$<$ Data\-Type $>$}, and \hyperlink{class_queue_linked_a57d5dd5336545ddc7d1b22cee40fb017}{\-Queue\-Linked$<$ Data\-Type $>$}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_queue_aaf3eed0540baaf6609b48910aacc7133}{\index{\-Queue@{\-Queue}!\-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E@{\-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E}}
+\index{\-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E@{\-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E}!Queue@{\-Queue}}
+\subsubsection[{\-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ const int {\bf \-Queue}$<$ \-Data\-Type $>$\-::{\bf \-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E} = 8\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_queue_aaf3eed0540baaf6609b48910aacc7133}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_queue_8h}{\-Queue.\-h}\end{DoxyCompactItemize}

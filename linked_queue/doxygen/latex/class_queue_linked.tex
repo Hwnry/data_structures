@@ -1,0 +1,453 @@
+\hypertarget{class_queue_linked}{\section{\-Queue\-Linked$<$ \-Data\-Type $>$ \-Class \-Template \-Reference}
+\label{class_queue_linked}\index{\-Queue\-Linked$<$ Data\-Type $>$@{\-Queue\-Linked$<$ Data\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$\-Queue\-Linked.\-h$>$}
+
+\-Inheritance diagram for \-Queue\-Linked$<$ \-Data\-Type $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_queue_linked}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries \-Queue\-Node}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_queue_linked_ad356fca32ffd90c78d35d3eb5d84504b}{\-Queue\-Linked} (int max\-Number=\hyperlink{class_queue}{\-Queue}$<$ \-Data\-Type $>$\-::\hyperlink{class_queue_aaf3eed0540baaf6609b48910aacc7133}{\-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\hyperlink{class_queue_linked_ad8749850191f8a4165c8e3a3a266bada}{\-Queue\-Linked} (const \hyperlink{class_queue_linked}{\-Queue\-Linked} \&other)
+\item 
+\hyperlink{class_queue_linked}{\-Queue\-Linked} \& \hyperlink{class_queue_linked_acec147d4de2139d2b6fd511bca6d6299}{operator=} (const \hyperlink{class_queue_linked}{\-Queue\-Linked} \&other)
+\item 
+\hyperlink{class_queue_linked_aed85fa73c60384a3d0c676c0ebbbca19}{$\sim$\-Queue\-Linked} ()
+\item 
+void \hyperlink{class_queue_linked_a7196448729d053f85f255674c7a57a02}{enqueue} (const \-Data\-Type \&new\-Data\-Item)  throw (logic\-\_\-error)
+\item 
+\-Data\-Type \hyperlink{class_queue_linked_ac0656892f605af3b952c71706d3af55d}{dequeue} ()  throw (logic\-\_\-error)
+\item 
+void \hyperlink{class_queue_linked_a32c66945765e5d42bbb988b1cdf43886}{clear} ()
+\item 
+bool \hyperlink{class_queue_linked_a425b83383323217c924a41a0226f7022}{is\-Empty} () const 
+\item 
+bool \hyperlink{class_queue_linked_a3de199675ee629f9d20c48d0e2b65f71}{is\-Full} () const 
+\item 
+void \hyperlink{class_queue_linked_a838a51b8023f9cf3a5a24abb67ae1ee4}{put\-Front} (const \-Data\-Type \&new\-Data\-Item)  throw (logic\-\_\-error)
+\item 
+\-Data\-Type \hyperlink{class_queue_linked_a2934f746096e31b9728de11f42bdc3cd}{get\-Rear} ()  throw (logic\-\_\-error)
+\item 
+int \hyperlink{class_queue_linked_ab2d7fc0a927f3fe1e2ac44cc042bb961}{get\-Length} () const 
+\item 
+void \hyperlink{class_queue_linked_a57d5dd5336545ddc7d1b22cee40fb017}{show\-Structure} () const 
+\end{DoxyCompactItemize}
+\subsubsection*{template$<$typename Data\-Type$>$ class Queue\-Linked$<$ Data\-Type $>$}
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_queue_linked_ad356fca32ffd90c78d35d3eb5d84504b}{\index{\-Queue\-Linked@{\-Queue\-Linked}!\-Queue\-Linked@{\-Queue\-Linked}}
+\index{\-Queue\-Linked@{\-Queue\-Linked}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{\-Queue\-Linked}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf \-Queue\-Linked} (
+\begin{DoxyParamCaption}
+\item[{int}]{ignore = {\ttfamily {\bf \-Queue}$<$\-Data\-Type$>$\-:\-:{\bf \-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E}}}
+\end{DoxyParamCaption}
+)}}\label{class_queue_linked_ad356fca32ffd90c78d35d3eb5d84504b}
+\-Default queue constructor
+
+\-This function will initialize the queue. \-The queue will then be used throughout the rest of the program to hold data specified by the user. \-It will also be used to simulate people waiting in a line.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ignore} & -\/ this is a variable that is not to be used in functions implementations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+the queue will be uninitialized 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+the node will be initialized 
+\end{DoxyPostcond}
+\hypertarget{class_queue_linked_ad8749850191f8a4165c8e3a3a266bada}{\index{\-Queue\-Linked@{\-Queue\-Linked}!\-Queue\-Linked@{\-Queue\-Linked}}
+\index{\-Queue\-Linked@{\-Queue\-Linked}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{\-Queue\-Linked}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf \-Queue\-Linked} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_queue_linked_ad8749850191f8a4165c8e3a3a266bada}
+\-Copy \-Constructor
+
+\-This constructor is called when a user wants to copy another queue. \-Moreover, this copy constructor uses the overloaded assignement operator to copy the other queue.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em other} & -\/ this is the queue that is going to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+the queue will be uninitialized 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+the queue will be initialized with the identical data and structure as the other queue. 
+\end{DoxyPostcond}
+\hypertarget{class_queue_linked_aed85fa73c60384a3d0c676c0ebbbca19}{\index{\-Queue\-Linked@{\-Queue\-Linked}!$\sim$\-Queue\-Linked@{$\sim$\-Queue\-Linked}}
+\index{$\sim$\-Queue\-Linked@{$\sim$\-Queue\-Linked}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{$\sim$\-Queue\-Linked}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::$\sim${\bf \-Queue\-Linked} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_queue_linked_aed85fa73c60384a3d0c676c0ebbbca19}
+\-Deconstructor
+
+\-The deconstructor deallocates space that was allocated to the queue. \-This deconstructor calls the clear function because its will remove all the nodes of the specified queue. \-It will then set the front and back pointers to null.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em noen} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+there will be a queue with allocated memory 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+the memory of the queue will be deallocated and pointers will be set to null 
+\end{DoxyPostcond}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_queue_linked_a32c66945765e5d42bbb988b1cdf43886}{\index{\-Queue\-Linked@{\-Queue\-Linked}!clear@{clear}}
+\index{clear@{clear}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf clear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_linked_a32c66945765e5d42bbb988b1cdf43886}
+clear operator
+
+\-This function is called when the user wished to get rid of all the data stored in current queue. \-If the queue is not empty, the clear function will move through each node and deallocate the memory in use. \-Finally, it will set front and back pointers to null.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+a queue with or without data 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+a queue without any data 
+\end{DoxyPostcond}
+
+
+\-Implements \hyperlink{class_queue_afba4d82c9a20859bb6397bd73c230cdd}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_linked_ac0656892f605af3b952c71706d3af55d}{\index{\-Queue\-Linked@{\-Queue\-Linked}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{dequeue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ \-Data\-Type {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf dequeue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_linked_ac0656892f605af3b952c71706d3af55d}
+dequeue function
+
+\-This function is used to remove the least recently added item from the queue. \-In the line simulation, this function is used to remove the customer in line and retrieve their arrival time. \-In this function, if there is nothing to remove, a error message will be thrown. \-If the only item of a queue is removed, it will set the pointers to null; otherwise, only the first item in the queue will be removed.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Data\-Type -\/ this function will return whatever data is in the first node of the queue. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em this} & function will not work if the queue is empty\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+a non-\/empty queue 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+a queue with one less data item in it, possibly empty. \-The data in removed item is returned. 
+\end{DoxyPostcond}
+
+
+\-Implements \hyperlink{class_queue_afde1535196f515caba0aa5cfbe62d329}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_linked_a7196448729d053f85f255674c7a57a02}{\index{\-Queue\-Linked@{\-Queue\-Linked}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf enqueue} (
+\begin{DoxyParamCaption}
+\item[{const \-Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_linked_a7196448729d053f85f255674c7a57a02}
+enqueue function
+
+\-The purpose of this function is to add a node with new data to the back of the queue. \-It is used in the line simulation to add customers with their arrival time to the back of the line. \-This function will check to see if the queue is full. \-If full, it will throw an error message. \-Otherwise, \-The function will check to see if it is empty and add the data accordingly. \-Because this is a void function, nothing will be returned.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em new\-Data\-Item} & -\/ the data of the new node that is added to the back of the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em queue} & can not be full\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+a queue with or without data in it 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+a queue with atleast one item of data in it or a new data item added to the back of the queue 
+\end{DoxyPostcond}
+
+
+\-Implements \hyperlink{class_queue_a4e0052bab8c2fb742a16a77d73ec3d5a}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_linked_ab2d7fc0a927f3fe1e2ac44cc042bb961}{\index{\-Queue\-Linked@{\-Queue\-Linked}!get\-Length@{get\-Length}}
+\index{get\-Length@{get\-Length}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{get\-Length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ int {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf get\-Length} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_queue_linked_ab2d7fc0a927f3fe1e2ac44cc042bb961}
+get\-Length function
+
+\-This function determines the number of items in the queue.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int -\/ an integer matching the number of items in the queue 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+a queue 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+the number of items in the queue is returned 
+\end{DoxyPostcond}
+\hypertarget{class_queue_linked_a2934f746096e31b9728de11f42bdc3cd}{\index{\-Queue\-Linked@{\-Queue\-Linked}!get\-Rear@{get\-Rear}}
+\index{get\-Rear@{get\-Rear}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{get\-Rear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ \-Data\-Type {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf get\-Rear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)}}\label{class_queue_linked_a2934f746096e31b9728de11f42bdc3cd}
+get\-Rear
+
+\-This function will get the data from the most recently added item of the queue, then it will deallocate it. \-If the queue is full it will throw an error message.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Data\-Type -\/ returns the data that was in the last item in the queue 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em the} & queue can not be empty\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+a queue with atleast one data item in it 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+a queue with one less data item in it, and the value of the data item is returned 
+\end{DoxyPostcond}
+\hypertarget{class_queue_linked_a425b83383323217c924a41a0226f7022}{\index{\-Queue\-Linked@{\-Queue\-Linked}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ bool {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_linked_a425b83383323217c924a41a0226f7022}
+\-Empty function
+
+\-This function checks to see if a queue is empty. \-It is essential becuase it is used frequently throughout the rest of the implementations. \-If there is data in the queue, it will return false. \-If empty it will return true.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ it returns a boolean with true if it is empty, and false if it has data 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+a queue that may or may not be empty 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+a boolean with a value that determines whether or not a queue is empty 
+\end{DoxyPostcond}
+
+
+\-Implements \hyperlink{class_queue_a1b8e1c0b8bb621de8d4f20c011176bd2}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_linked_a3de199675ee629f9d20c48d0e2b65f71}{\index{\-Queue\-Linked@{\-Queue\-Linked}!is\-Full@{is\-Full}}
+\index{is\-Full@{is\-Full}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ bool {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf is\-Full} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_linked_a3de199675ee629f9d20c48d0e2b65f71}
+is\-Full function
+
+\-This function checks to see if a queue is full or not. \-Because \-I currently do not run the possiblity of running out of memory, this funciton will always return false.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ a boolean with the value of false because \-I will not run out of memory while running this program. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+a queue with or without data in it 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+a boolean set to false because the queue will never be full 
+\end{DoxyPostcond}
+
+
+\-Implements \hyperlink{class_queue_ae64751e270709a705d49e6168e64ade8}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_linked_acec147d4de2139d2b6fd511bca6d6299}{\index{\-Queue\-Linked@{\-Queue\-Linked}!operator=@{operator=}}
+\index{operator=@{operator=}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$ \& {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_queue_linked_acec147d4de2139d2b6fd511bca6d6299}
+\-Overloaded assignment operator
+
+\-This operator is called when a linked queue is being assigned to another linked queue. \-The purpose of this function is to get an identical copy of the assigned queue.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em other} & -\/ the queue that is to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+($\ast$this) -\/ it returns the current queue (the new copy of the queue) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em this} & function will not work if a queue is trying to assign itself\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+two queues will be initialized and one will be assigned to the other 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+the data and structure of the two queues will be identical 
+\end{DoxyPostcond}
+\hypertarget{class_queue_linked_a838a51b8023f9cf3a5a24abb67ae1ee4}{\index{\-Queue\-Linked@{\-Queue\-Linked}!put\-Front@{put\-Front}}
+\index{put\-Front@{put\-Front}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{put\-Front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf \-Queue\-Linked}$<$ \-Data\-Type $>$\-::{\bf put\-Front} (
+\begin{DoxyParamCaption}
+\item[{const \-Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)}}\label{class_queue_linked_a838a51b8023f9cf3a5a24abb67ae1ee4}
+put\-Front function
+
+\-This function will take new data and place it at the front of the queue. \-This function will add a node to the queue if it is empty. \-If the queue is not empty, a new node will be added to the beginning of current queue with changing the remainder of the queue
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em new\-Data\-Item} & -\/ the data that will be placed in the new node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em none} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPrecond}{\-Precondition}
+a queue with or without data 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+a queue with a new data item added to the beginning of it 
+\end{DoxyPostcond}
+\hypertarget{class_queue_linked_a57d5dd5336545ddc7d1b22cee40fb017}{\index{\-Queue\-Linked@{\-Queue\-Linked}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!QueueLinked@{\-Queue\-Linked}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename D\-T $>$ void {\bf \-Queue\-Linked}$<$ \-D\-T $>$\-::{\bf show\-Structure} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_linked_a57d5dd5336545ddc7d1b22cee40fb017}
+
+
+\-Implements \hyperlink{class_queue_a7db7279a763ca59f7fef354759beab17}{\-Queue$<$ Data\-Type $>$}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_queue_linked_8h}{\-Queue\-Linked.\-h}\item 
+\hyperlink{_queue_linked_8cpp}{\-Queue\-Linked.\-cpp}\item 
+\hyperlink{show7_8cpp}{show7.\-cpp}\end{DoxyCompactItemize}

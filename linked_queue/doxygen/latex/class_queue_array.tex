@@ -1,0 +1,171 @@
+\hypertarget{class_queue_array}{\section{\-Queue\-Array$<$ \-Data\-Type $>$ \-Class \-Template \-Reference}
+\label{class_queue_array}\index{\-Queue\-Array$<$ Data\-Type $>$@{\-Queue\-Array$<$ Data\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$\-Queue\-Array.\-h$>$}
+
+\-Inheritance diagram for \-Queue\-Array$<$ \-Data\-Type $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_queue_array}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_queue_array_a112114659f8c2590872426a2dee8e6cc}{\-Queue\-Array} (int max\-Number=\hyperlink{class_queue}{\-Queue}$<$ \-Data\-Type $>$\-::\hyperlink{class_queue_aaf3eed0540baaf6609b48910aacc7133}{\-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\hyperlink{class_queue_array_a08df206def55e930c9c561ee8bc93422}{\-Queue\-Array} (const \hyperlink{class_queue_array}{\-Queue\-Array} \&other)
+\item 
+\hyperlink{class_queue_array}{\-Queue\-Array} \& \hyperlink{class_queue_array_adaad55e5da06583cc786af90937a94c1}{operator=} (const \hyperlink{class_queue_array}{\-Queue\-Array} \&other)
+\item 
+\hyperlink{class_queue_array_ae48667f5b0894a5f22971002c4aed67e}{$\sim$\-Queue\-Array} ()
+\item 
+void \hyperlink{class_queue_array_a15e0632c580858c396d3aac1265fecd7}{enqueue} (const \-Data\-Type \&new\-Data\-Item)  throw (logic\-\_\-error)
+\item 
+\-Data\-Type \hyperlink{class_queue_array_a34d386d2323aa80b7b441d4436153a89}{dequeue} ()  throw (logic\-\_\-error)
+\item 
+void \hyperlink{class_queue_array_a154afbf4084cb08e3a134f2f6a33df6c}{clear} ()
+\item 
+bool \hyperlink{class_queue_array_ae1298c7e16e1053b628a019e71db4320}{is\-Empty} () const 
+\item 
+bool \hyperlink{class_queue_array_a7233d591dd81e9e3d3f6e4ad5631c81c}{is\-Full} () const 
+\item 
+void \hyperlink{class_queue_array_add18fcb931a244d56040a1f0a0c24a8f}{put\-Front} (const \-Data\-Type \&new\-Data\-Item)  throw (logic\-\_\-error)
+\item 
+\-Data\-Type \hyperlink{class_queue_array_a8bebf91214e116f74d4482bf9babee2d}{get\-Rear} ()  throw (logic\-\_\-error)
+\item 
+int \hyperlink{class_queue_array_a1d1bf41a4ca23c30f53296a0e0c5bf33}{get\-Length} () const 
+\item 
+void \hyperlink{class_queue_array_adde651b7fd7865dc4f281e21c7f1a6c3}{show\-Structure} () const 
+\end{DoxyCompactItemize}
+\subsubsection*{template$<$typename Data\-Type$>$ class Queue\-Array$<$ Data\-Type $>$}
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_queue_array_a112114659f8c2590872426a2dee8e6cc}{\index{\-Queue\-Array@{\-Queue\-Array}!\-Queue\-Array@{\-Queue\-Array}}
+\index{\-Queue\-Array@{\-Queue\-Array}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{\-Queue\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf \-Queue\-Array} (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Number = {\ttfamily {\bf \-Queue}$<$~\-Data\-Type~$>$\-:\-:{\bf \-M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E}}}
+\end{DoxyParamCaption}
+)}}\label{class_queue_array_a112114659f8c2590872426a2dee8e6cc}
+\hypertarget{class_queue_array_a08df206def55e930c9c561ee8bc93422}{\index{\-Queue\-Array@{\-Queue\-Array}!\-Queue\-Array@{\-Queue\-Array}}
+\index{\-Queue\-Array@{\-Queue\-Array}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{\-Queue\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf \-Queue\-Array} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue\-Array}$<$ \-Data\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_queue_array_a08df206def55e930c9c561ee8bc93422}
+\hypertarget{class_queue_array_ae48667f5b0894a5f22971002c4aed67e}{\index{\-Queue\-Array@{\-Queue\-Array}!$\sim$\-Queue\-Array@{$\sim$\-Queue\-Array}}
+\index{$\sim$\-Queue\-Array@{$\sim$\-Queue\-Array}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{$\sim$\-Queue\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::$\sim${\bf \-Queue\-Array} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_queue_array_ae48667f5b0894a5f22971002c4aed67e}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_queue_array_a154afbf4084cb08e3a134f2f6a33df6c}{\index{\-Queue\-Array@{\-Queue\-Array}!clear@{clear}}
+\index{clear@{clear}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf clear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_array_a154afbf4084cb08e3a134f2f6a33df6c}
+
+
+\-Implements \hyperlink{class_queue_afba4d82c9a20859bb6397bd73c230cdd}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_array_a34d386d2323aa80b7b441d4436153a89}{\index{\-Queue\-Array@{\-Queue\-Array}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{dequeue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ \-Data\-Type {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf dequeue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_array_a34d386d2323aa80b7b441d4436153a89}
+
+
+\-Implements \hyperlink{class_queue_afde1535196f515caba0aa5cfbe62d329}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_array_a15e0632c580858c396d3aac1265fecd7}{\index{\-Queue\-Array@{\-Queue\-Array}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf enqueue} (
+\begin{DoxyParamCaption}
+\item[{const \-Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_array_a15e0632c580858c396d3aac1265fecd7}
+
+
+\-Implements \hyperlink{class_queue_a4e0052bab8c2fb742a16a77d73ec3d5a}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_array_a1d1bf41a4ca23c30f53296a0e0c5bf33}{\index{\-Queue\-Array@{\-Queue\-Array}!get\-Length@{get\-Length}}
+\index{get\-Length@{get\-Length}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{get\-Length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ int {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf get\-Length} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_queue_array_a1d1bf41a4ca23c30f53296a0e0c5bf33}
+\hypertarget{class_queue_array_a8bebf91214e116f74d4482bf9babee2d}{\index{\-Queue\-Array@{\-Queue\-Array}!get\-Rear@{get\-Rear}}
+\index{get\-Rear@{get\-Rear}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{get\-Rear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ \-Data\-Type {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf get\-Rear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)}}\label{class_queue_array_a8bebf91214e116f74d4482bf9babee2d}
+\hypertarget{class_queue_array_ae1298c7e16e1053b628a019e71db4320}{\index{\-Queue\-Array@{\-Queue\-Array}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ bool {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_array_ae1298c7e16e1053b628a019e71db4320}
+
+
+\-Implements \hyperlink{class_queue_a1b8e1c0b8bb621de8d4f20c011176bd2}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_array_a7233d591dd81e9e3d3f6e4ad5631c81c}{\index{\-Queue\-Array@{\-Queue\-Array}!is\-Full@{is\-Full}}
+\index{is\-Full@{is\-Full}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ bool {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf is\-Full} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_array_a7233d591dd81e9e3d3f6e4ad5631c81c}
+
+
+\-Implements \hyperlink{class_queue_ae64751e270709a705d49e6168e64ade8}{\-Queue$<$ Data\-Type $>$}.
+
+\hypertarget{class_queue_array_adaad55e5da06583cc786af90937a94c1}{\index{\-Queue\-Array@{\-Queue\-Array}!operator=@{operator=}}
+\index{operator=@{operator=}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf \-Queue\-Array}\& {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Queue\-Array}$<$ \-Data\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_queue_array_adaad55e5da06583cc786af90937a94c1}
+\hypertarget{class_queue_array_add18fcb931a244d56040a1f0a0c24a8f}{\index{\-Queue\-Array@{\-Queue\-Array}!put\-Front@{put\-Front}}
+\index{put\-Front@{put\-Front}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{put\-Front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf put\-Front} (
+\begin{DoxyParamCaption}
+\item[{const \-Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)  throw (logic\-\_\-error)}}\label{class_queue_array_add18fcb931a244d56040a1f0a0c24a8f}
+\hypertarget{class_queue_array_adde651b7fd7865dc4f281e21c7f1a6c3}{\index{\-Queue\-Array@{\-Queue\-Array}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!QueueArray@{\-Queue\-Array}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf \-Queue\-Array}$<$ \-Data\-Type $>$\-::{\bf show\-Structure} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_queue_array_adde651b7fd7865dc4f281e21c7f1a6c3}
+
+
+\-Implements \hyperlink{class_queue_a7db7279a763ca59f7fef354759beab17}{\-Queue$<$ Data\-Type $>$}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_queue_array_8h}{\-Queue\-Array.\-h}\item 
+\hyperlink{show7_8cpp}{show7.\-cpp}\end{DoxyCompactItemize}

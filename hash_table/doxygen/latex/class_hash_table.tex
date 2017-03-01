@@ -1,0 +1,317 @@
+\hypertarget{class_hash_table}{\section{\-Hash\-Table$<$ \-Data\-Type, \-Key\-Type $>$ \-Class \-Template \-Reference}
+\label{class_hash_table}\index{\-Hash\-Table$<$ Data\-Type, Key\-Type $>$@{\-Hash\-Table$<$ Data\-Type, Key\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$\-Hash\-Table.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hash_table_a103b09f30dbac0fe92fc2f1192feb0c1}{\-Hash\-Table} (int init\-Table\-Size)
+\item 
+\hyperlink{class_hash_table_a5da00f8a0dc9dc745675a96eac228049}{\-Hash\-Table} (const \hyperlink{class_hash_table}{\-Hash\-Table} \&other)
+\item 
+\hyperlink{class_hash_table}{\-Hash\-Table} \& \hyperlink{class_hash_table_add76a73a92b81a2d54c20078d4a76546}{operator=} (const \hyperlink{class_hash_table}{\-Hash\-Table} \&other)
+\item 
+\hyperlink{class_hash_table_ae25eb9c66b9bce8c9c04f18e22688a15}{$\sim$\-Hash\-Table} ()
+\item 
+void \hyperlink{class_hash_table_adc8f2be061729bdc5ecb171b54304e17}{insert} (const \-Data\-Type \&new\-Data\-Item)
+\item 
+bool \hyperlink{class_hash_table_a46d3f8ad70fd80dc7aa64f50676ef7a5}{remove} (const \-Key\-Type \&delete\-Key)
+\item 
+bool \hyperlink{class_hash_table_ad4ee3ff641daa330260a48de29492e66}{retrieve} (const \-Key\-Type \&search\-Key, \-Data\-Type \&return\-Item) const 
+\item 
+void \hyperlink{class_hash_table_a57f581334e35d45a8822c03edc0fcca6}{clear} ()
+\item 
+bool \hyperlink{class_hash_table_a101e211a7fca37cd90722e15df2fc571}{is\-Empty} () const 
+\item 
+void \hyperlink{class_hash_table_a8b875e57f71a5bbba394e42361fb9fb4}{show\-Structure} () const 
+\item 
+double \hyperlink{class_hash_table_a4db2d920fd7c632f5b4b1bacd503bbf1}{standard\-Deviation} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_hash_table_a300302ed45228f07c21ad8bf1d852fdd}{copy\-Table} (const \hyperlink{class_hash_table}{\-Hash\-Table} \&source)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_hash_table_a5b2aa73ce05cee50154f418eab43530b}{table\-Size}
+\item 
+\hyperlink{class_b_s_tree}{\-B\-S\-Tree}$<$ \-Data\-Type, \-Key\-Type $>$ $\ast$ \hyperlink{class_hash_table_a1bff814c04c4dd2f0db26f2387557006}{data\-Table}
+\end{DoxyCompactItemize}
+\subsubsection*{template$<$typename Data\-Type, typename Key\-Type$>$ class Hash\-Table$<$ Data\-Type, Key\-Type $>$}
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_hash_table_a103b09f30dbac0fe92fc2f1192feb0c1}{\index{\-Hash\-Table@{\-Hash\-Table}!\-Hash\-Table@{\-Hash\-Table}}
+\index{\-Hash\-Table@{\-Hash\-Table}!HashTable@{\-Hash\-Table}}
+\subsubsection[{\-Hash\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf \-Hash\-Table} (
+\begin{DoxyParamCaption}
+\item[{int}]{init\-Table\-Size}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_a103b09f30dbac0fe92fc2f1192feb0c1}
+\hyperlink{class_hash_table}{\-Hash\-Table} default constructor
+
+\-This function checks to see if the size is greater than zero. \-If it is, memory is allocated. \-The size of the array is specified by init\-Table\-Size. table\-Size is set to init\-Table\-Size
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em init\-Table\-Size} & -\/ how many elements should be included in the hashtable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+-\/ there will not be any memory allocated to the hashtable. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+-\/ there will be memory allocated, and table\-Size will be recorded 
+\end{DoxyPostcond}
+\hypertarget{class_hash_table_a5da00f8a0dc9dc745675a96eac228049}{\index{\-Hash\-Table@{\-Hash\-Table}!\-Hash\-Table@{\-Hash\-Table}}
+\index{\-Hash\-Table@{\-Hash\-Table}!HashTable@{\-Hash\-Table}}
+\subsubsection[{\-Hash\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf \-Hash\-Table} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_a5da00f8a0dc9dc745675a96eac228049}
+\hyperlink{class_hash_table}{\-Hash\-Table} \-Copy constructor
+
+\-This constructor gets the other hashtable's table size, allocates memory, and proceeds to copy the data in each memory location.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em other-\/} & the hashtable that is supposed to be copied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+-\/ there will be one unitialized tree and another initialized tree that must be copied 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+-\/ there will be two trees with identical values. 
+\end{DoxyPostcond}
+\hypertarget{class_hash_table_ae25eb9c66b9bce8c9c04f18e22688a15}{\index{\-Hash\-Table@{\-Hash\-Table}!$\sim$\-Hash\-Table@{$\sim$\-Hash\-Table}}
+\index{$\sim$\-Hash\-Table@{$\sim$\-Hash\-Table}!HashTable@{\-Hash\-Table}}
+\subsubsection[{$\sim$\-Hash\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::$\sim${\bf \-Hash\-Table} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_ae25eb9c66b9bce8c9c04f18e22688a15}
+\hyperlink{class_hash_table}{\-Hash\-Table} deconstructor
+
+deallocate all the memory in the current hashtable
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+-\/ there may or may not be memory allocated to the current hashtable 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+-\/ there will not be memory allocated to the current hashtable 
+\end{DoxyPostcond}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_hash_table_a57f581334e35d45a8822c03edc0fcca6}{\index{\-Hash\-Table@{\-Hash\-Table}!clear@{clear}}
+\index{clear@{clear}!HashTable@{\-Hash\-Table}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ void {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf clear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_a57f581334e35d45a8822c03edc0fcca6}
+clear function
+
+\-This function deletes all the memory allocated in the \-B\-S\-Ts in each hashtable's location
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+there may or may not be memory allocated to the \-B\-S\-Ts in the current hashtable 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+there will not be memory allocated to the \-B\-S\-Ts in the current hashtable 
+\end{DoxyPostcond}
+\hypertarget{class_hash_table_a300302ed45228f07c21ad8bf1d852fdd}{\index{\-Hash\-Table@{\-Hash\-Table}!copy\-Table@{copy\-Table}}
+\index{copy\-Table@{copy\-Table}!HashTable@{\-Hash\-Table}}
+\subsubsection[{copy\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ void {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf copy\-Table} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$ \&}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{class_hash_table_a300302ed45228f07c21ad8bf1d852fdd}
+\hypertarget{class_hash_table_adc8f2be061729bdc5ecb171b54304e17}{\index{\-Hash\-Table@{\-Hash\-Table}!insert@{insert}}
+\index{insert@{insert}!HashTable@{\-Hash\-Table}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ void {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf insert} (
+\begin{DoxyParamCaption}
+\item[{const \-Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_adc8f2be061729bdc5ecb171b54304e17}
+insert function
+
+\-This function gets the hashvalue, offsets the data\-Table to the specified location, then inserts the data into the correct location.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em new\-Data\-Item} & -\/ the data item that is to be inserted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+none
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+the new\-Data\-Item will not be inserted into the current hashtable 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+the new\-Data\-Item will be inserted into the current hashtable 
+\end{DoxyPostcond}
+\hypertarget{class_hash_table_a101e211a7fca37cd90722e15df2fc571}{\index{\-Hash\-Table@{\-Hash\-Table}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!HashTable@{\-Hash\-Table}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ bool {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_table_a101e211a7fca37cd90722e15df2fc571}
+is\-Empty function
+
+\-This function checks whether or not there is memory in any of the \-B\-S\-T's in the hash\-Table
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ returns whether or not there is memory allocated to the \-B\-S\-T's in the hash\-Table
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+one will not no whether or not the hashtable is empty 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+the hashtable will or will not be deemed empty 
+\end{DoxyPostcond}
+\hypertarget{class_hash_table_add76a73a92b81a2d54c20078d4a76546}{\index{\-Hash\-Table@{\-Hash\-Table}!operator=@{operator=}}
+\index{operator=@{operator=}!HashTable@{\-Hash\-Table}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$ \& {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_add76a73a92b81a2d54c20078d4a76546}
+\-Overloaded operator
+
+\-The overloaded operator checks to see if the current hashtable is being assigned to itself. \-If it is, it simply returns itself; otherwise, it will clear any data currently in it, deallocate, resize itself, and proceed to copy the value in each memory location
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em other} & -\/ the hashtable that has been assigned to the current hashtable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Hash\-Table$<$\-Data\-Type, Key\-Type$>$\& -\/ the current hashtable with its new assigned values
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+-\/ there may or may not be two different hashtables 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+-\/ there will be either two hashtables with identical values, or one hashtable that returned itself 
+\end{DoxyPostcond}
+\hypertarget{class_hash_table_a46d3f8ad70fd80dc7aa64f50676ef7a5}{\index{\-Hash\-Table@{\-Hash\-Table}!remove@{remove}}
+\index{remove@{remove}!HashTable@{\-Hash\-Table}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ bool {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf remove} (
+\begin{DoxyParamCaption}
+\item[{const \-Key\-Type \&}]{delete\-Key}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_a46d3f8ad70fd80dc7aa64f50676ef7a5}
+remove function
+
+\-This function removes the data\-Item that matches the delete\-Key
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em delete\-Key} & -\/ the key that is to be searched for and removed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ whether or not the hashtable has successfully removed the the specified data
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+-\/ the data\-Item may or may not be in the current hashtable 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+-\/ the data\-Item will not be in the current hashtable 
+\end{DoxyPostcond}
+\hypertarget{class_hash_table_ad4ee3ff641daa330260a48de29492e66}{\index{\-Hash\-Table@{\-Hash\-Table}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!HashTable@{\-Hash\-Table}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ bool {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf retrieve} (
+\begin{DoxyParamCaption}
+\item[{const \-Key\-Type \&}]{search\-Key, }
+\item[{\-Data\-Type \&}]{return\-Item}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_table_ad4ee3ff641daa330260a48de29492e66}
+retrieve function
+
+the retrieve function searches for the item with the specified search\-Key. \-If it is found, a true boolean is returned, and the data\-Item with the matching key is set to return\-Item
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em search\-Key} & -\/ the key that is used to locate the specified data\-Item \\
+\hline
+{\em return\-Item} & -\/ this parameter copies the data\-Item with the matching search\-Key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ returns whether or not the item was removed
+\end{DoxyReturn}
+\begin{DoxyPrecond}{\-Precondition}
+-\/ there may or may not be the specified data\-Item in the current hashtable 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+-\/ there will ont be the specified data\-Item in the current hashtable 
+\end{DoxyPostcond}
+\hypertarget{class_hash_table_a8b875e57f71a5bbba394e42361fb9fb4}{\index{\-Hash\-Table@{\-Hash\-Table}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!HashTable@{\-Hash\-Table}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ void {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf show\-Structure} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_table_a8b875e57f71a5bbba394e42361fb9fb4}
+\hypertarget{class_hash_table_a4db2d920fd7c632f5b4b1bacd503bbf1}{\index{\-Hash\-Table@{\-Hash\-Table}!standard\-Deviation@{standard\-Deviation}}
+\index{standard\-Deviation@{standard\-Deviation}!HashTable@{\-Hash\-Table}}
+\subsubsection[{standard\-Deviation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ double {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf standard\-Deviation} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_table_a4db2d920fd7c632f5b4b1bacd503bbf1}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_hash_table_a1bff814c04c4dd2f0db26f2387557006}{\index{\-Hash\-Table@{\-Hash\-Table}!data\-Table@{data\-Table}}
+\index{data\-Table@{data\-Table}!HashTable@{\-Hash\-Table}}
+\subsubsection[{data\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ {\bf \-B\-S\-Tree}$<$\-Data\-Type, \-Key\-Type$>$$\ast$ {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf data\-Table}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{class_hash_table_a1bff814c04c4dd2f0db26f2387557006}
+\hypertarget{class_hash_table_a5b2aa73ce05cee50154f418eab43530b}{\index{\-Hash\-Table@{\-Hash\-Table}!table\-Size@{table\-Size}}
+\index{table\-Size@{table\-Size}!HashTable@{\-Hash\-Table}}
+\subsubsection[{table\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ int {\bf \-Hash\-Table}$<$ \-Data\-Type, \-Key\-Type $>$\-::{\bf table\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{class_hash_table_a5b2aa73ce05cee50154f418eab43530b}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_hash_table_8h}{\-Hash\-Table.\-h}\item 
+\hyperlink{_hash_table_8cpp}{\-Hash\-Table.\-cpp}\item 
+\hyperlink{show10_8cpp}{show10.\-cpp}\end{DoxyCompactItemize}

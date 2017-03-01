@@ -1,0 +1,94 @@
+\hypertarget{struct_user}{\section{\-User \-Struct \-Reference}
+\label{struct_user}\index{\-User@{\-User}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_user_a2e80fcc7ee1c64b63e5c5433617632c6}{set\-Key} (string new\-Key)
+\item 
+string \hyperlink{struct_user_a888c011f2602a1b22d86eb5f492f92da}{get\-Key} () const 
+\item 
+int \hyperlink{struct_user_a8b756bdc2df4309bf981b6def2eff41d}{hash} (const string str) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{struct_user_a643f85779a4693855c171c396f49e515}{name}
+\item 
+string \hyperlink{struct_user_a7383a88f44f38d4c0fd63a9ea63c0cab}{keyword}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{struct_user}{\-User} struct
+
+\-This struct is used to store the username and password. \-The set\-Key function sets the key of the current data member. \-The get\-Key ofcourse gets the key of the specified user profile. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{struct_user_a888c011f2602a1b22d86eb5f492f92da}{\index{\-User@{\-User}!get\-Key@{get\-Key}}
+\index{get\-Key@{get\-Key}!User@{\-User}}
+\subsubsection[{get\-Key}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-User\-::get\-Key} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_user_a888c011f2602a1b22d86eb5f492f92da}
+get\-Key function
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em -\/} & none\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{\-Precondition}
+there must be a keyword set in the struct 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+there will be a keyword returned
+\end{DoxyPostcond}
+\begin{DoxyReturn}{\-Returns}
+the keyword that is a string 
+\end{DoxyReturn}
+\hypertarget{struct_user_a8b756bdc2df4309bf981b6def2eff41d}{\index{\-User@{\-User}!hash@{hash}}
+\index{hash@{hash}!User@{\-User}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-User\-::hash} (
+\begin{DoxyParamCaption}
+\item[{const string}]{str}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_user_a8b756bdc2df4309bf981b6def2eff41d}
+\hypertarget{struct_user_a2e80fcc7ee1c64b63e5c5433617632c6}{\index{\-User@{\-User}!set\-Key@{set\-Key}}
+\index{set\-Key@{set\-Key}!User@{\-User}}
+\subsubsection[{set\-Key}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-User\-::set\-Key} (
+\begin{DoxyParamCaption}
+\item[{string}]{new\-Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_user_a2e80fcc7ee1c64b63e5c5433617632c6}
+set\-Key function
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em new\-Key} & -\/ the key that must be placed into the the current user's profile\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{\-Precondition}
+there may or may not be a key assigned to the current user profile 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{\-Postcondition}
+there will be a key assigned to the current user profile specified in the parameters
+\end{DoxyPostcond}
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{struct_user_a7383a88f44f38d4c0fd63a9ea63c0cab}{\index{\-User@{\-User}!keyword@{keyword}}
+\index{keyword@{keyword}!User@{\-User}}
+\subsubsection[{keyword}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-User\-::keyword}}}\label{struct_user_a7383a88f44f38d4c0fd63a9ea63c0cab}
+\hypertarget{struct_user_a643f85779a4693855c171c396f49e515}{\index{\-User@{\-User}!name@{name}}
+\index{name@{name}!User@{\-User}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-User\-::name}}}\label{struct_user_a643f85779a4693855c171c396f49e515}
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{login_8cpp}{login.\-cpp}\end{DoxyCompactItemize}
